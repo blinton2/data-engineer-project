@@ -5,7 +5,7 @@ Data Model is stored as data_model.pdf
 If you want you can run "python transformations.py" (I was using python 3.6.7) after cloning the repository.  The print statements simulate what actions would be taken if I had time to setup an actual Database.
 
 Here are some things I thought were worth mentioning:
-* Used dbdiagram.io to generate the data model
+* Used dbdiagram.io to generate the data model for the OLAP layer
 * Dimension tables start with d_, fact tables start with f_ in the star schema model
 * Normalized the model as much as possible
 * Included created at, updated at, and last action id (user or service principal that made the last update to that column) columns to track and audit history
@@ -15,7 +15,8 @@ Here are some things I thought were worth mentioning:
 
 If I were actually building this out for a team and had more time I would implement the following:
 * More thorough data model
-* Implement data model in a PostreSQL DB with DDL and some sort of DB Version control (such as flyway: https://flywaydb.org/)
+* Implement data model in a PostreSQL (or Snowflake if there was a large amount of data) DB with DDL and some sort of DB Version control (such as flyway: https://flywaydb.org/)
+* Use a distributed compute platform for the processing such as pyspark on Databricks if the data being read was substantial (more than 1 or 10 TB's)
 * Create a dev guide to help with onboarding new developers to this project in the README.md
 * More Object Oriented Python design with classes rather than just a single Python file that does everything
 * API would be configured where each function in my api.py script would be it's own lambda function triggered by AWS API Gateway, routed to an appropriate DNS (e.g. www.guild.com/api/v1/movies)
