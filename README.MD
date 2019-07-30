@@ -2,6 +2,8 @@
 
 Data Model is stored as data_model.pdf
 
+If you want you can run "python transformations.py" (I was using python 3.6.7) after cloning the repository.  The print statements simulate what actions would be taken if I had time to setup an actual Database.
+
 Here are some things I thought were worth mentioning:
 * Used dbdiagram.io to generate the data model
 * Dimension tables start with d_, fact tables start with f_ in the star schema model
