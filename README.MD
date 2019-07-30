@@ -20,7 +20,7 @@ If I were actually building this out for a team and had more time I would implem
 * More thorough unit tests to verify that the transformations were being done properly
 * More API endpoints 
 
-This took me a total of x minutes to complete.  There's a lot more I'd like to implement here, but obviously understand you guys want to see what can be done given an alotted time.
+This took me a total of about 150 minutes to complete.  There's a lot more I'd like to implement here, but obviously understand you guys want to see what can be done given an alotted time.
 
 
 
