@@ -4,6 +4,12 @@ Data Model is stored as data_model.pdf
 
 If you want you can run "python transformations.py" (I was using python 3.6.7) after cloning the repository.  The print statements simulate what actions would be taken if I had time to setup an actual Database.
 
+Summary of files:
+* utilities.py includes commonly used (utility) functions that will be used across the project
+* transformation.py reads in the data, parses it, and writes it to the database with the normalized model
+* api.py is the file used for the api layer to retrieve appropriate data from the database
+* model_generation_code.txt is the code used to generate the Data Model on dbdiagram.io
+
 Here are some things I thought were worth mentioning:
 * Used dbdiagram.io to generate the data model for the OLAP layer
 * Dimension tables start with d_, fact tables start with f_ in the star schema model
