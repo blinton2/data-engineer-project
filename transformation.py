@@ -18,10 +18,14 @@ def parse_movie():
 	    headers = next(content, None)
 	    #Append relevant columns to movies table
 	    for row in content:
+	    	budget = row[2]
 	        title = row[8]
 	        release_date = row[14]
+	        revenue = row[15]
 	        runtime = row[16]
-	        movies_table.append([title,release_date,runtime])
+
+
+	        movies_table.append([title,release_date,runtime,revenue,budget])
 	return movies_table
 
 def parse_cast():
@@ -43,8 +47,10 @@ if __name__ == '__main__':
     	title = row[0]
     	release_date = row[1]
     	runtime = row[2]
+    	revenue = row[3]
+    	budget = row[4]
     	#can do this for the rest of the rows
-    	movie_insert_query = "INSERT INTO d_movie (title,release_date,runtime,created_at,updated_at,last_action_id) VALUES ('{0}','{1}',{2},now(),now(),1);".format(title,release_date,runtime)
+    	movie_insert_query = "INSERT INTO d_movie (title,release_date,runtime,revenue,budget,created_at,updated_at,last_action_id) VALUES ('{0}','{1}',{2},{3},{4},now(),now(),1);".format(title,release_date,runtime,revenue,budget)
     	try:
             #do_query(connection,movie_insert_query)
             print("Inserted {} into d_movies".format(row))
