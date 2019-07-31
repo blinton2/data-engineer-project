@@ -5,6 +5,7 @@ Table d_movie {
   overview varchar
   homepage varchar
   budget bigint
+  revenue bigint
   is_adult boolean
   release_date date [not null]
   runtime int [not null]
