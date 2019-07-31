@@ -21,7 +21,8 @@ If I were actually building this out for a team and had more time I would implem
 * More Object Oriented Python design with classes rather than just a single Python file that does everything
 * API would be configured where each function in my api.py script would be it's own lambda function triggered by AWS API Gateway, routed to an appropriate DNS (e.g. www.guild.com/api/v1/movies)
 * More thorough unit tests to verify that the transformations were being done properly
-* More API endpoints 
+* More API endpoints
+* More thorough security implementation including api keys for users to include in the header when making api requests, Appropriate access for the s3 bucket, and appropriate Networking for the database and compute engine (cluster)
 
 This took me a total of about 150 minutes to complete.  There's a lot more I'd like to implement here, but obviously understand you guys want to see what can be done given an alotted time.
 
