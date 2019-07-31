@@ -18,7 +18,7 @@ def parse_movie():
 	    headers = next(content, None)
 	    #Append relevant columns to movies table
 	    for row in content:
-	    	budget = row[2]
+	        budget = row[2]
 	        title = row[8]
 	        release_date = row[14]
 	        revenue = row[15]
@@ -44,16 +44,16 @@ if __name__ == '__main__':
     crew_data = parse_crew()
     #Would do the below for all tables
     for row in movie_data:
-    	title = row[0]
-    	release_date = row[1]
-    	runtime = row[2]
-    	revenue = row[3]
-    	budget = row[4]
+        title = row[0]
+        release_date = row[1]
+        runtime = row[2]
+        revenue = row[3]
+        budget = row[4]
     	#can do this for the rest of the rows
-    	movie_insert_query = "INSERT INTO d_movie (title,release_date,runtime,revenue,budget,created_at,updated_at,last_action_id) VALUES ('{0}','{1}',{2},{3},{4},now(),now(),1);".format(title,release_date,runtime,revenue,budget)
-    	try:
+        movie_insert_query = "INSERT INTO d_movie (title,release_date,runtime,revenue,budget,created_at,updated_at,last_action_id) VALUES ('{0}','{1}',{2},{3},{4},now(),now(),1);".format(title,release_date,runtime,revenue,budget)
+        try:
             #do_query(connection,movie_insert_query)
             print("Inserted {} into d_movies".format(row))
-    	except:
+        except:
             print("Error Inserting movie {}.  Movie already exists in DB or there was a connection issue".format(title))
 
